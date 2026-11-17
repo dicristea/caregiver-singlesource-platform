@@ -2,15 +2,13 @@
 
 **TECH 5900 Product Studio · Cornell Tech · Fall 2026**
 
-> ### Your family's care, all in one place.
-> CareCircle is the one source of truth for families caring for the people they love: a one-stop shop for the prescriptions, bills, appointments and follow-ups that pile up after every visit. Snap a document, check what it read, and the reminders and next steps are set up for you. Less time on paperwork, more time together.
->
-> *Built first for the sandwich generation: working adults raising kids while caring for a parent on Medicare Advantage, starting with the hard first week home from the hospital.*
+### One place for everyone you care for.
+CareCircle is the one source of truth for people navigating care for the people they love: a one-stop shop for the prescriptions, bills, appointments and follow-ups that pile up after every visit. Snap a document, check what it read, and the reminders and next steps are set up for you. Less time on paperwork, more time together.
 
 The UI is built and deployed on synthetic data. Backend work is open and tracked in the [Product roadmap](#product-roadmap) and [Backend hand-off](#backend-hand-off).
 
 - **Live app:** `https://carecircle-caregiverplatform.vercel.app` (see [Deploy](#deploy-free-on-vercel))
-- **Design source:** [CareCircle Figma](https://www.figma.com/design/UNy0iGfSEzyws5eKAVXxOD/CareCircle--iPhone-Mockup). The UI matches it screen for screen.
+- **Design source:** [CareCircle Figma](https://www.figma.com/design/UNy0iGfSEzyws5eKAVXxOD/CareCircle--iPhone-Mockup).
 - **Demo story:** Ana (the caregiver), her mother Elena and her son Luca. All data is synthetic.
 
 ---
