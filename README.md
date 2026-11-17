@@ -7,7 +7,7 @@ CareCircle is the one source of truth for people navigating care for the people 
 
 The UI is built and deployed on synthetic data. Backend work is open and tracked in the [Product roadmap](#product-roadmap) and [Backend hand-off](#backend-hand-off).
 
-- **Live app:** `https://carecircle-caregiverplatform.vercel.app` (see [Deploy](#deploy-free-on-vercel))
+- **Live app:** `https://carecircle-caregiverplatform.vercel.app` (see [Testing on Vercel](#testing-on-vercel-no-vercel-account-needed))
 - **Design source:** [CareCircle Figma](https://www.figma.com/design/UNy0iGfSEzyws5eKAVXxOD/CareCircle--iPhone-Mockup).
 - **Demo story:** Ana (the caregiver), her mother Elena and her son Luca. All data is synthetic.
 
@@ -53,16 +53,27 @@ On a phone, open the URL in Safari → **Share → Add to Home Screen**. The app
 
 To reset the story: **Settings → Reset demo**.
 
-## Deploy free on Vercel
+## Testing on Vercel (no Vercel account needed)
 
-Vercel's Hobby plan is free for non-commercial projects, and every pull request gets its own preview URL.
+The app is already deployed on Vercel's free Hobby plan from this repo, and Diana owns the Vercel project. **Backend Eng doesn't need a Vercel account.** The repo is public, so Vercel builds every push from any collaborator.
 
-1. [vercel.com/new](https://vercel.com/new) → **Import** `caregiver-singlesource-platform`.
-2. **Project name:** `carecircle-caregiverplatform` → free URL `carecircle-caregiverplatform.vercel.app`.
-3. Leave the other settings as they are: Vite is set by `vercel.json`, the root directory is `./`, and no environment variables are needed yet. Click **Deploy**.
-4. Every push to `main` redeploys production. Every PR gets a preview URL.
+### How to test a change
 
-`vercel.json` adds SPA routing (deep links like `/people/elena/meds` work) and a camera-only permissions policy.
+1. **Locally first:** `npm run dev`, then open http://localhost:5173.
+2. **Push a branch and open a pull request** into `main`.
+3. **Vercel comments on the PR with a preview URL**, e.g. `carecircle-caregiverplatform-git-<branch>-dicristea.vercel.app`. It updates on every push to that branch.
+4. **Test on an iPhone:** open the preview URL in Safari. For push notifications, use **Share → Add to Home Screen** and open the app from the Home Screen icon. iOS only allows web push for installed apps.
+5. **Merge to `main`.** Production redeploys at **https://carecircle-caregiverplatform.vercel.app** within about a minute.
+
+### What only the Vercel project owner can do
+
+The free plan has a single owner, so ask Diana for these:
+
+- **Secrets and environment variables:** API keys, VAPID keys for web push, database URLs. Send them privately, never in the repo. Diana adds them under Project → Settings → Environment Variables. Locally, keep them in `.env.local`, which git ignores.
+- **Function logs and build errors:** visible only in the Vercel dashboard. Diana can share a screenshot, so reproduce problems locally first when you can.
+- **Preview access:** previews are open to anyone with the link only if Deployment Protection is off (Settings → Deployment Protection). If a preview asks you to log in to Vercel, ask Diana to turn it off.
+
+`vercel.json` sets the build (Vite → `dist/`), SPA routing (deep links like `/people/elena/meds` work) and a camera-only permissions policy.
 
 ---
 
