@@ -1,0 +1,33 @@
+/* Layout helpers (flex rows/stacks with Figma gaps) */
+.row-5 { display: flex; align-items: center; gap: 5px; }
+.row-8 { display: flex; align-items: center; gap: 8px; }
+.row-12 { display: flex; align-items: center; gap: 12px; text-align: left; }
+.row-14 { display: flex; align-items: center; gap: 14px; }
+.stack-2 { display: flex; flex-direction: column; gap: 2px; }
+.stack-3 { display: flex; flex-direction: column; gap: 3px; }
+.stack-8 { display: flex; flex-direction: column; gap: 8px; }
+.stack-10 { display: flex; flex-direction: column; gap: 10px; }
+.stack-12 { display: flex; flex-direction: column; gap: 12px; }
+
+/* Today timeline */
+.reminder-row { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.reminder-row + .reminder-row { border-top: 1px solid var(--line); }
+.reminder-row__time { width: 62px; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+.status-dot { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--line-strong); display: grid; place-items: center; flex-shrink: 0; color: #fff; transition: background 0.15s; }
+.status-dot--done { background: var(--green); border-color: var(--green); }
+.status-dot--late { border-color: var(--red); }
+
+/* Medication pinned rules */
+.pinned { background: var(--bg); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.pinned__rule { display: flex; gap: 8px; font-size: 14px; font-weight: 500; line-height: 19px; align-items: flex-start; }
+.pinned__rule svg { margin-top: 2px; flex-shrink: 0; }
+
+/* Document thumbnail */
+.doc-thumb { width: 40px; height: 50px; border-radius: 6px; border: 1px solid var(--line); background: var(--paper); overflow: hidden; display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
+.doc-thumb__band { height: 12px; font-size: 8px; font-weight: 700; padding: 1px 4px; margin-bottom: 2px; }
+.doc-thumb__line { height: 3px; border-radius: 1px; background: var(--handle); margin-left: 6px; }
+
+/* Option cards */
+.option-card { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 20px; width: 100%; text-align: left; }
+.option-card--sand { background: var(--bg); }
+.option-card--white { background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
