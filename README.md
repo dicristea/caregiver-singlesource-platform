@@ -2,8 +2,10 @@
 
 **TECH 5900 Product Studio · Cornell Tech · Fall 2026**
 
-> **Snap it once. CareCircle reads it, the caregiver approves every detail, and the work is set up.**
-> For working adults managing a parent's care (Medicare Advantage, first week after a discharge or specialist referral).
+> ### Your family's care, all in one place.
+> CareCircle is the one source of truth for families caring for the people they love: a one-stop shop for the prescriptions, bills, appointments and follow-ups that pile up after every visit. Snap a document, check what it read, and the reminders and next steps are set up for you. Less time on paperwork, more time together.
+>
+> *Built first for the sandwich generation: working adults raising kids while caring for a parent on Medicare Advantage, starting with the hard first week home from the hospital.*
 
 The UI is built and deployed on synthetic data. Backend work is open and tracked in the [Product roadmap](#product-roadmap) and [Backend hand-off](#backend-hand-off).
 
